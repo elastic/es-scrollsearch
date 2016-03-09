@@ -1,0 +1,38 @@
+{
+  "name": "es-scrollsearch",
+  "version": "1.0.0-dev",
+  "description": "Scroll through all Elasticsearch search results as a single stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r test/setup test/**/*.spec.js",
+    "test:dev": "npm test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elastic/es-scroll-stream.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "search",
+    "scroll",
+    "request",
+    "stream"
+  ],
+  "author": "Court Ewing <court@epixa.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "^4.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/elastic/es-scrollsearch/issues"
+  },
+  "homepage": "https://github.com/elastic/es-scrollsearch#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  }
+}
