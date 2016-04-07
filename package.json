@@ -40,6 +40,7 @@
   "dependencies": {
     "JSONStream": "^1.1.1",
     "highland": "^2.7.1",
+    "request": "^2.70.0",
     "streamqueue": "^1.1.1"
   }
 }
