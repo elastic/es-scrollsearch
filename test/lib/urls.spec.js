@@ -8,6 +8,10 @@ const toUrlObj = urlHelpers.toUrlObj;
 
 describe('urls', () => {
   describe('#assertValidUrlObj()', () => {
+    it('noops for urls without query strings or hashes', () => {
+      const urlObj = toUrlObj(makeUrl('/foo'));
+      expect(() => urls.assertValidUrlObj(urlObj)).not.to.throw();
+    });
     it('throws if url includes query string', () => {
       const urlObj = toUrlObj(makeUrl('/foo?bar'));
       expect(() => urls.assertValidUrlObj(urlObj)).to.throw();
