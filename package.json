@@ -33,11 +33,13 @@
     "eslint-config-airbnb": "^6.1.0",
     "lodash": "^4.6.1",
     "mocha": "^2.4.5",
+    "node-uuid": "^1.4.7",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
     "JSONStream": "^1.1.1",
-    "highland": "^2.7.1"
+    "highland": "^2.7.1",
+    "streamqueue": "^1.1.1"
   }
 }
