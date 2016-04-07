@@ -1,0 +1,15 @@
+{
+  "_scroll_id":"4",
+  "took":14,
+  "timed_out":false,
+  "_shards":{
+    "total":9,
+    "successful":9,
+    "failed":0
+  },
+  "hits":{
+    "total":3003,
+    "max_score":1.0,
+    "hits":[]
+  }
+}

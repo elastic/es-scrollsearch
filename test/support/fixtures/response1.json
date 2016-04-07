@@ -1,0 +1,995 @@
+{
+  "took":14,
+  "timed_out":false,
+  "_shards":{
+    "total":9,
+    "successful":9,
+    "failed":0
+  },
+  "hits":{
+    "total":3003,
+    "max_score":1.0,
+    "hits":[
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"apache",
+        "_id":"AVKjHMJFzKqSZRTy0aZl",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T11:13:49.911Z",
+          "ip":"230.172.18.237",
+          "extension":"png",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":35.13845472,
+              "lon":-111.6712183
+            },
+            "src":"IN",
+            "dest":"IN",
+            "srcdest":"IN:IN"
+          },
+          "@tags":[
+            "success",
+            "info"
+          ],
+          "utc_time":"2016-02-01T11:13:49.911Z",
+          "referer":"http://facebook.com/success/charles-d-walker",
+          "agent":"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)",
+          "clientip":"230.172.18.237",
+          "bytes":2440,
+          "host":"media-for-the-masses.theacademyofperformingartsandscience.org",
+          "request":"/uploads/george-d-zamka.png",
+          "url":"https://media-for-the-masses.theacademyofperformingartsandscience.org/uploads/george-d-zamka.png",
+          "@message":"230.172.18.237 - - [2016-02-01T11:13:49.911Z] \"GET /uploads/george-d-zamka.png HTTP/1.1\" 200 2440 \"-\" \"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>walter-cunningham</h5>",
+            "http://www.slate.com/success/frederick-hauck"
+          ],
+          "links":[
+            "nicole-marie-passonno-stott@nytimes.com",
+            "http://facebook.com/info/anthony-llewellyn",
+            "www.facebook.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/music/alec-who-is-the-same-age-as-jesus-responds-to-his-critic-also-a-special-guest-appearance-by-judas-aka-bob-dylan-you-know-the-guy-from-the-panty-commercial-2412643",
+              "og:type":"article",
+              "og:title":"Alec (who is the same age as Jesus) responds to his critic. Also, a special guest appearance by Judas aka Bob Dylan (you know, the guy from the panty commercial).",
+              "og:description":"I am 33, the same age of Jesus. Clearly those kids in their teens and early twenties who you&#039;re meeting have some work to do to get as arrogant as me. B...",
+              "og:url":"http://www.laweekly.com/music/alec-who-is-the-same-age-as-jesus-responds-to-his-critic-also-a-special-guest-appearance-by-judas-aka-bob-dylan-you-know-the-guy-from-the-panty-commercial-2412643",
+              "article:published_time":"2008-02-25T09:00:00-08:00",
+              "article:modified_time":"2014-11-27T10:45:51-08:00",
+              "article:section":"Music",
+              "og:image":"http://images1.laweekly.com/imager/alec-who-is-the-same-age-as-jesus-respon/u/original/2475618/080225_teenagekicks_sellingout.jpg",
+              "og:image:height":"300",
+              "og:image:width":"300",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Alec (who is the same age as Jesus) responds to his critic. Also, a special guest appearance by Judas aka Bob Dylan (you know, the guy from the panty commercial).",
+              "twitter:description":"I am 33, the same age of Jesus. Clearly those kids in their teens and early twenties who you&#039;re meeting have some work to do to get as arrogant as me. B...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/alec-who-is-the-same-age-as-jesus-respon/u/original/2475618/080225_teenagekicks_sellingout.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/music/rolling-on-the-coachella-express-to-indio-2407947",
+              "og:type":"article",
+              "og:title":"Rolling on the Coachella Express to Indio",
+              "og:description":"On the Coachella Express, there are a few distinct types of people: the media, which was invited to document the maiden voyage of the Amtrak line that d...",
+              "og:url":"http://www.laweekly.com/music/rolling-on-the-coachella-express-to-indio-2407947",
+              "article:published_time":"2008-04-25T05:25:07-07:00",
+              "article:modified_time":"2014-11-27T07:32:20-08:00",
+              "article:section":"Music",
+              "og:image":"http://IMAGES1.laweekly.com/imager/rolling-on-the-coachella-express-to-indio/u/original/2470385/img_2088.jpg",
+              "og:image:height":"768",
+              "og:image:width":"1024",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Rolling on the Coachella Express to Indio",
+              "twitter:description":"On the Coachella Express, there are a few distinct types of people: the media, which was invited to document the maiden voyage of the Amtrak line that d...",
+              "twitter:card":"summary",
+              "twitter:image":"http://IMAGES1.laweekly.com/imager/rolling-on-the-coachella-express-to-indio/u/original/2470385/img_2088.jpg",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "os":"ios",
+            "ram":32212254720
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"apache",
+        "_id":"AVKjHMJFzKqSZRTy0aZo",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T07:51:47.952Z",
+          "ip":"228.236.4.32",
+          "extension":"gif",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":37.27938889,
+              "lon":-100.3563056
+            },
+            "src":"PK",
+            "dest":"PH",
+            "srcdest":"PK:PH"
+          },
+          "@tags":[
+            "success",
+            "info"
+          ],
+          "utc_time":"2016-02-01T07:51:47.952Z",
+          "referer":"http://www.slate.com/success/daniel-bursch",
+          "agent":"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1",
+          "clientip":"228.236.4.32",
+          "bytes":29,
+          "host":"motion-media.theacademyofperformingartsandscience.org",
+          "request":"/canhaz/andrew-m-allen.gif",
+          "url":"https://motion-media.theacademyofperformingartsandscience.org/canhaz/andrew-m-allen.gif",
+          "@message":"228.236.4.32 - - [2016-02-01T07:51:47.952Z] \"GET /canhaz/andrew-m-allen.gif HTTP/1.1\" 200 29 \"-\" \"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>f-drew-gaffney</h5>",
+            "http://nytimes.com/success/michael-s-hopkins"
+          ],
+          "links":[
+            "joseph-tanner@www.slate.com",
+            "http://www.slate.com/info/james-dutton",
+            "www.twitter.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/music/mex-emo-news-coverage-explodes-2401636",
+              "og:type":"article",
+              "og:title":"Mex-Emo News Coverage Explodes",
+              "og:description":"L.A. Weekly blogger and former staff writer Daniel Hernandez uncovered a wild story about attacks on &quot;emo&quot; youths in Mexico City on LA Daily and his own...",
+              "og:url":"http://www.laweekly.com/music/mex-emo-news-coverage-explodes-2401636",
+              "article:published_time":"2008-03-28T11:10:05-07:00",
+              "article:modified_time":"2014-11-27T07:00:43-08:00",
+              "article:section":"Music",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Mex-Emo News Coverage Explodes",
+              "twitter:description":"L.A. Weekly blogger and former staff writer Daniel Hernandez uncovered a wild story about attacks on &quot;emo&quot; youths in Mexico City on LA Daily and his own...",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "os":"win xp",
+            "ram":11811160064
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"nginx",
+        "_id":"AVKjHMJFzKqSZRTy0aZp",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T11:07:20.932Z",
+          "ip":"223.169.203.230",
+          "extension":"jpg",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":34.85508722,
+              "lon":-83.996855
+            },
+            "src":"GB",
+            "dest":"PL",
+            "srcdest":"GB:PL"
+          },
+          "@tags":[
+            "warning",
+            "info"
+          ],
+          "utc_time":"2016-02-01T11:07:20.932Z",
+          "referer":"http://www.slate.com/error/jay-c-buckey",
+          "agent":"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)",
+          "clientip":"223.169.203.230",
+          "bytes":3264,
+          "host":"media-for-the-masses.theacademyofperformingartsandscience.org",
+          "request":"/uploads/roger-b-chaffee.jpg",
+          "url":"https://media-for-the-masses.theacademyofperformingartsandscience.org/uploads/roger-b-chaffee.jpg",
+          "@message":"223.169.203.230 - - [2016-02-01T11:07:20.932Z] \"GET /uploads/roger-b-chaffee.jpg HTTP/1.1\" 200 3264 \"-\" \"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>andrew-j-feustel</h5>",
+            "http://twitter.com/success/john-d-olivas"
+          ],
+          "links":[
+            "david-leestma@www.slate.com",
+            "http://www.slate.com/login/joe-edwards",
+            "www.www.slate.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/arts/these-shoes-are-made-for-walkin-2370661",
+              "og:type":"article",
+              "og:title":"These Shoes are Made for Walkin",
+              "og:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "og:url":"http://www.laweekly.com/arts/these-shoes-are-made-for-walkin-2370661",
+              "article:published_time":"2005-11-15T10:11:21-08:00",
+              "article:modified_time":"2014-11-25T18:06:08-08:00",
+              "article:section":"Arts",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"These Shoes are Made for Walkin",
+              "twitter:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/music/crank-that-crunk-2404548",
+              "og:type":"article",
+              "og:title":"Crank that Crunk",
+              "og:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "og:url":"http://www.laweekly.com/music/crank-that-crunk-2404548",
+              "article:published_time":"2007-03-15T13:03:24-07:00",
+              "article:modified_time":"2014-11-27T08:11:03-08:00",
+              "article:section":"Music",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Crank that Crunk",
+              "twitter:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/music/smashing-pumpkins-san-diego-9-19-2400343",
+              "og:type":"article",
+              "og:title":"Smashing Pumpkins, San Diego, 9/19",
+              "og:description":"Smashing Pumpkins SDSU Open Air Theatre, Sept. 19 By Carlie Armstrong As far as southern California nights go, Wednesday night was alarmingly chilly. Ho...",
+              "og:url":"http://www.laweekly.com/music/smashing-pumpkins-san-diego-9-19-2400343",
+              "article:published_time":"2007-09-21T09:32:53-07:00",
+              "article:modified_time":"2014-11-27T06:48:30-08:00",
+              "article:section":"Music",
+              "og:image":"http://IMAGES1.laweekly.com/imager/smashing-pumpkins-san-diego-9-19/u/original/2462628/corg2.jpg",
+              "og:image:height":"720",
+              "og:image:width":"480",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Smashing Pumpkins, San Diego, 9/19",
+              "twitter:description":"Smashing Pumpkins SDSU Open Air Theatre, Sept. 19 By Carlie Armstrong As far as southern California nights go, Wednesday night was alarmingly chilly. Ho...",
+              "twitter:card":"summary",
+              "twitter:image":"http://IMAGES1.laweekly.com/imager/smashing-pumpkins-san-diego-9-19/u/original/2462628/corg2.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/arts/gen-art-turns-10-2374200",
+              "og:type":"article",
+              "og:title":"Gen Art Turns 10",
+              "og:description":"(Gen Art&#039;s fresh faces) There it was&mdash; the Peterson Automotive Museum splayed out along the corner of Fairfax and Wilshire. I could see part of its...",
+              "og:url":"http://www.laweekly.com/arts/gen-art-turns-10-2374200",
+              "article:published_time":"2007-10-15T15:44:33-07:00",
+              "article:modified_time":"2014-11-25T20:33:53-08:00",
+              "article:section":"Arts",
+              "og:image":"http://images1.laweekly.com/imager/gen-art-turns-10/u/original/2444647/gen_art_designers.jpg",
+              "og:image:height":"375",
+              "og:image:width":"500",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Gen Art Turns 10",
+              "twitter:description":"(Gen Art&#039;s fresh faces) There it was&mdash; the Peterson Automotive Museum splayed out along the corner of Fairfax and Wilshire. I could see part of its...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/gen-art-turns-10/u/original/2444647/gen_art_designers.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/restaurants/trader-joe-s-says-dont-freak-out-over-arsenic-in-wine-5462051",
+              "og:type":"article",
+              "og:title":"Trader Joe’s Says Don&#039;t Freak Out Over Arsenic in Wine",
+              "og:description":"Numerous studies have shown that even small amounts of arsenic have been associated with raising the risk for cancer, heart disease, diabetes and other ...",
+              "og:url":"http://www.laweekly.com/restaurants/trader-joe-s-says-dont-freak-out-over-arsenic-in-wine-5462051",
+              "article:published_time":"2015-04-02T06:55:00-07:00",
+              "article:modified_time":"2015-04-02T06:55:04-07:00",
+              "article:section":"Restaurants",
+              "og:image":"http://images1.laweekly.com/imager/u/original/5462249/rosewine.jpg",
+              "og:image:height":"889",
+              "og:image:width":"1175",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Trader Joe’s Says Don&#039;t Freak Out Over Arsenic in Wine",
+              "twitter:description":"Numerous studies have shown that even small amounts of arsenic have been associated with raising the risk for cancer, heart disease, diabetes and other ...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/u/original/5462249/rosewine.jpg",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "os":"win xp"
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"apache",
+        "_id":"AVKjHMJFzKqSZRTy0aZr",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T06:49:41.580Z",
+          "ip":"3.103.96.239",
+          "extension":"jpg",
+          "response":"503",
+          "geo":{
+            "coordinates":{
+              "lat":39.52038889,
+              "lon":-75.72044444
+            },
+            "src":"ID",
+            "dest":"GH",
+            "srcdest":"ID:GH"
+          },
+          "@tags":[
+            "success",
+            "security"
+          ],
+          "utc_time":"2016-02-01T06:49:41.580Z",
+          "referer":"http://twitter.com/success/alexander-viktorenko",
+          "agent":"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1",
+          "clientip":"3.103.96.239",
+          "bytes":0,
+          "host":"media-for-the-masses.theacademyofperformingartsandscience.org",
+          "request":"/uploads/william-c-mccool.jpg",
+          "url":"https://media-for-the-masses.theacademyofperformingartsandscience.org/uploads/william-c-mccool.jpg",
+          "@message":"3.103.96.239 - - [2016-02-01T06:49:41.580Z] \"GET /uploads/william-c-mccool.jpg HTTP/1.1\" 503 0 \"-\" \"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>christopher-loria</h5>",
+            "http://www.slate.com/success/william-c-mccool"
+          ],
+          "links":[
+            "james-m-kelly@www.slate.com",
+            "http://www.slate.com/security/terence-henricks",
+            "www.twitter.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/news/billboard-inspection-program-still-a-bust-2392610",
+              "og:type":"article",
+              "og:title":"Billboard Inspection Program Still a Bust",
+              "og:description":"&ldquo;It is the Los Angeles dodge and delay program,&rdquo; said a frustrated Marilyn Cohon, the Vice President of Westwood South of Santa Monica Homeo...",
+              "og:url":"http://www.laweekly.com/news/billboard-inspection-program-still-a-bust-2392610",
+              "article:published_time":"2008-05-27T22:03:41-07:00",
+              "article:modified_time":"2014-11-26T17:38:58-08:00",
+              "article:section":"News",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Billboard Inspection Program Still a Bust",
+              "twitter:description":"&ldquo;It is the Los Angeles dodge and delay program,&rdquo; said a frustrated Marilyn Cohon, the Vice President of Westwood South of Santa Monica Homeo...",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/news/cordons-market-sunset-near-normanide-2368131",
+              "og:type":"article",
+              "og:title":"Cordon&#039;s Market - Sunset near Normanide",
+              "og:description":"Across from the closed down Cordon&#039;s Market they are playing backgammon in front of a coffee shop. With very tiny dice. More after the jump...",
+              "og:url":"http://www.laweekly.com/news/cordons-market-sunset-near-normanide-2368131",
+              "article:published_time":"2007-08-02T21:26:30-07:00",
+              "article:modified_time":"2014-10-28T15:00:10-07:00",
+              "article:section":"News",
+              "article:tag":"Games",
+              "og:image":"http://images1.laweekly.com/imager/cordons-market-sunset-near-normanide/u/original/2430953/img_1435.jpg",
+              "og:image:height":"290",
+              "og:image:width":"480",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Cordon&#039;s Market - Sunset near Normanide",
+              "twitter:description":"Across from the closed down Cordon&#039;s Market they are playing backgammon in front of a coffee shop. With very tiny dice. More after the jump...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/cordons-market-sunset-near-normanide/u/original/2430953/img_1435.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/music/crass-chose-iconography-and-dissed-photography-2411310",
+              "og:type":"article",
+              "og:title":"Crass chose iconography and dissed photography",
+              "og:description":"Crass preferred resting their image on stencils, flyers, collages, newspaper articles, forged documents, banners, patches. Whenever they had an opportun...",
+              "og:url":"http://www.laweekly.com/music/crass-chose-iconography-and-dissed-photography-2411310",
+              "article:published_time":"2008-02-28T09:00:00-08:00",
+              "article:modified_time":"2014-11-27T10:16:06-08:00",
+              "article:section":"Music",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Crass chose iconography and dissed photography",
+              "twitter:description":"Crass preferred resting their image on stencils, flyers, collages, newspaper articles, forged documents, banners, patches. Whenever they had an opportun...",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/arts/rock-exclusive-slash-gives-up-drinking-jack-daniels-2370813",
+              "og:type":"article",
+              "og:title":"Rock Exclusive - Slash Gives Up Drinking Jack Daniels",
+              "og:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "og:url":"http://www.laweekly.com/arts/rock-exclusive-slash-gives-up-drinking-jack-daniels-2370813",
+              "article:published_time":"2006-09-12T10:09:54-07:00",
+              "article:modified_time":"2014-11-25T18:09:56-08:00",
+              "article:section":"Arts",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Rock Exclusive - Slash Gives Up Drinking Jack Daniels",
+              "twitter:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "ram":17179869184
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"apache",
+        "_id":"AVKjHMJFzKqSZRTy0aZv",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T09:19:38.002Z",
+          "ip":"180.95.130.195",
+          "extension":"jpg",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":38.5267075,
+              "lon":-77.85885528
+            },
+            "src":"TR",
+            "dest":"IN",
+            "srcdest":"TR:IN"
+          },
+          "@tags":[
+            "success",
+            "info"
+          ],
+          "utc_time":"2016-02-01T09:19:38.002Z",
+          "referer":"http://twitter.com/success/kenneth-bowersox",
+          "agent":"Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.50 Safari/534.24",
+          "clientip":"180.95.130.195",
+          "bytes":6534,
+          "host":"media-for-the-masses.theacademyofperformingartsandscience.org",
+          "request":"/uploads/norman-thagard.jpg",
+          "url":"https://media-for-the-masses.theacademyofperformingartsandscience.org/uploads/norman-thagard.jpg",
+          "@message":"180.95.130.195 - - [2016-02-01T09:19:38.002Z] \"GET /uploads/norman-thagard.jpg HTTP/1.1\" 200 6534 \"-\" \"Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.50 Safari/534.24\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>liu-wang</h5>",
+            "http://www.slate.com/success/millie-hughes-fulford"
+          ],
+          "links":[
+            "michael-p-anderson@www.slate.com",
+            "http://www.slate.com/login/christer-fuglesang",
+            "www.www.slate.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/news/confronting-food-shortages-in-mexico-2385988",
+              "og:type":"article",
+              "og:title":"Confronting food shortages in Mexico",
+              "og:description":"Mexican President Felipe Calderon announced an ambitious plan last week to confront rising food costs in Mexico and to prevent the type of shortages and...",
+              "og:url":"http://www.laweekly.com/news/confronting-food-shortages-in-mexico-2385988",
+              "article:published_time":"2008-06-03T01:09:34-07:00",
+              "article:modified_time":"2014-11-26T17:49:01-08:00",
+              "article:section":"News",
+              "og:image":"http://IMAGES1.laweekly.com/imager/confronting-food-shortages-in-mexico/u/original/2415673/mexico_city_hernandez3.jpg",
+              "og:image:height":"100",
+              "og:image:width":"480",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Confronting food shortages in Mexico",
+              "twitter:description":"Mexican President Felipe Calderon announced an ambitious plan last week to confront rising food costs in Mexico and to prevent the type of shortages and...",
+              "twitter:card":"summary",
+              "twitter:image":"http://IMAGES1.laweekly.com/imager/confronting-food-shortages-in-mexico/u/original/2415673/mexico_city_hernandez3.jpg",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "os":"ios",
+            "ram":15032385536
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"nginx",
+        "_id":"AVKjHMJFzKqSZRTy0aZx",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T12:07:02.395Z",
+          "ip":"206.200.193.236",
+          "extension":"png",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":40.23820667,
+              "lon":-81.01256917
+            },
+            "src":"DK",
+            "dest":"CN",
+            "srcdest":"DK:CN"
+          },
+          "@tags":[
+            "warning",
+            "info"
+          ],
+          "utc_time":"2016-02-01T12:07:02.395Z",
+          "referer":"http://www.slate.com/success/yuri-gidzenko",
+          "agent":"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)",
+          "clientip":"206.200.193.236",
+          "bytes":2368,
+          "host":"media-for-the-masses.theacademyofperformingartsandscience.org",
+          "request":"/uploads/dmitri-kondratyev.png",
+          "url":"https://media-for-the-masses.theacademyofperformingartsandscience.org/uploads/dmitri-kondratyev.png",
+          "@message":"206.200.193.236 - - [2016-02-01T12:07:02.395Z] \"GET /uploads/dmitri-kondratyev.png HTTP/1.1\" 200 2368 \"-\" \"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>jean-loup-chr-tien</h5>",
+            "http://www.slate.com/warning/daniel-barry"
+          ],
+          "links":[
+            "mol@twitter.com",
+            "http://facebook.com/info/guy-gardner",
+            "www.www.slate.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/arts/land-of-the-lost-2372206",
+              "og:type":"article",
+              "og:title":"Land of the Lost",
+              "og:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "og:url":"http://www.laweekly.com/arts/land-of-the-lost-2372206",
+              "article:published_time":"2006-06-05T13:06:32-07:00",
+              "article:modified_time":"2014-11-25T18:55:44-08:00",
+              "article:section":"Arts",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Land of the Lost",
+              "twitter:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/arts/letting-the-days-go-by-2370006",
+              "og:type":"article",
+              "og:title":"Letting the Days Go By",
+              "og:description":"And you may find yourself in a Motel 6 in Van Nuys, And you may find yourself eating a Tommy burger at 2 am And you may find yourself in another part of...",
+              "og:url":"http://www.laweekly.com/arts/letting-the-days-go-by-2370006",
+              "article:published_time":"2006-07-02T01:07:18-07:00",
+              "article:modified_time":"2014-11-25T18:52:38-08:00",
+              "article:section":"Arts",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Letting the Days Go By",
+              "twitter:description":"And you may find yourself in a Motel 6 in Van Nuys, And you may find yourself eating a Tommy burger at 2 am And you may find yourself in another part of...",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/arts/talladega-shoes-2372060",
+              "og:type":"article",
+              "og:title":"Talladega Shoes",
+              "og:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "og:url":"http://www.laweekly.com/arts/talladega-shoes-2372060",
+              "article:published_time":"2007-01-10T17:01:47-08:00",
+              "article:modified_time":"2014-11-25T18:52:11-08:00",
+              "article:section":"Arts",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Talladega Shoes",
+              "twitter:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "os":"win xp",
+            "ram":9663676416
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"nginx",
+        "_id":"AVKjHMJFzKqSZRTy0aZz",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T15:09:29.312Z",
+          "ip":"194.144.79.28",
+          "extension":"jpg",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":45.49825694,
+              "lon":-91.00186361
+            },
+            "src":"RU",
+            "dest":"NL",
+            "srcdest":"RU:NL"
+          },
+          "@tags":[
+            "success",
+            "security"
+          ],
+          "utc_time":"2016-02-01T15:09:29.312Z",
+          "referer":"http://facebook.com/success/gennady-padalka",
+          "agent":"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1",
+          "clientip":"194.144.79.28",
+          "bytes":4091,
+          "host":"media-for-the-masses.theacademyofperformingartsandscience.org",
+          "request":"/uploads/svetlana-savitskaya.jpg",
+          "url":"https://media-for-the-masses.theacademyofperformingartsandscience.org/uploads/svetlana-savitskaya.jpg",
+          "@message":"194.144.79.28 - - [2016-02-01T15:09:29.312Z] \"GET /uploads/svetlana-savitskaya.jpg HTTP/1.1\" 200 4091 \"-\" \"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>michael-r-clifford</h5>",
+            "http://nytimes.com/success/andrew-thomas"
+          ],
+          "links":[
+            "viktor-gorbatko@facebook.com",
+            "http://www.slate.com/info/piers-sellers",
+            "www.www.slate.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/music/record-cover-design-finally-catches-up-with-the-new-ugly-2401640",
+              "og:type":"article",
+              "og:title":"Record cover design finally catches up with &quot;the new ugly&quot;?",
+              "og:description":"Race to the bottom: Lil Wayne vs. Weezer. Worstest record cover wins.",
+              "og:url":"http://www.laweekly.com/music/record-cover-design-finally-catches-up-with-the-new-ugly-2401640",
+              "article:published_time":"2008-04-23T11:00:00-07:00",
+              "article:modified_time":"2014-11-27T07:55:06-08:00",
+              "article:section":"Music",
+              "og:image":"http://images1.laweekly.com/imager/record-cover-design-finally-catches-up-wit/u/original/2463946/080422_teenagekicks_wayneweezer.jpg",
+              "og:image:height":"250",
+              "og:image:width":"500",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Record cover design finally catches up with &quot;the new ugly&quot;?",
+              "twitter:description":"Race to the bottom: Lil Wayne vs. Weezer. Worstest record cover wins.",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/record-cover-design-finally-catches-up-wit/u/original/2463946/080422_teenagekicks_wayneweezer.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/music/black-keys-jay-reatard-wiltern-4-1-2411794",
+              "og:type":"article",
+              "og:title":"Black Keys, Jay Reatard, Wiltern, 4/1",
+              "og:description":"Black Keys, Jay Reatard The Wiltern, April 1 By Jonah Flicker We&rsquo;ll get to the white-boy blues-rock in just a sec, but first we have a very seriou...",
+              "og:url":"http://www.laweekly.com/music/black-keys-jay-reatard-wiltern-4-1-2411794",
+              "article:published_time":"2008-04-02T08:15:46-07:00",
+              "article:modified_time":"2014-11-27T07:01:27-08:00",
+              "article:section":"Music",
+              "og:image":"http://images1.laweekly.com/imager/black-keys-jay-reatard-wiltern-4-1/u/original/2474618/blackkeystn025.jpg",
+              "og:image:height":"319",
+              "og:image:width":"480",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Black Keys, Jay Reatard, Wiltern, 4/1",
+              "twitter:description":"Black Keys, Jay Reatard The Wiltern, April 1 By Jonah Flicker We&rsquo;ll get to the white-boy blues-rock in just a sec, but first we have a very seriou...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/black-keys-jay-reatard-wiltern-4-1/u/original/2474618/blackkeystn025.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/music/the-kidz-in-the-hall-demonstrate-the-power-of-a-good-rolodex-2403889",
+              "og:type":"article",
+              "og:title":"The Kidz In the Hall Demonstrate the Power of A Good Rolodex",
+              "og:description":"When ex-Just Blaze proteges, Kidz in the Hall released their debut album, School Was My Hustle on the newly revived Rawkus Records, I didn&#039;t listen to i...",
+              "og:url":"http://www.laweekly.com/music/the-kidz-in-the-hall-demonstrate-the-power-of-a-good-rolodex-2403889",
+              "article:published_time":"2008-05-09T16:00:00-07:00",
+              "article:modified_time":"2014-11-27T08:56:46-08:00",
+              "article:section":"Music",
+              "article:tag":"Brown University",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"The Kidz In the Hall Demonstrate the Power of A Good Rolodex",
+              "twitter:description":"When ex-Just Blaze proteges, Kidz in the Hall released their debut album, School Was My Hustle on the newly revived Rawkus Records, I didn&#039;t listen to i...",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/restaurants/the-vegan-beer-festival-returns-this-may-with-a-swanky-new-location-5470861",
+              "og:type":"article",
+              "og:title":"The Vegan Beer Festival Returns This May With a Swanky New Location",
+              "og:description":"Now in its 6th year, the Vegan Beer Festival will take place this May with more animal-free food and drinks at a much improved location.",
+              "og:url":"http://www.laweekly.com/restaurants/the-vegan-beer-festival-returns-this-may-with-a-swanky-new-location-5470861",
+              "article:published_time":"2015-04-03T06:55:00-07:00",
+              "article:modified_time":"2015-04-03T06:55:04-07:00",
+              "article:section":"Restaurants",
+              "og:image":"http://images1.laweekly.com/imager/u/original/5470943/vegan-beer.jpg",
+              "og:image:height":"798",
+              "og:image:width":"1200",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"The Vegan Beer Festival Returns This May With a Swanky New Location",
+              "twitter:description":"Now in its 6th year, the Vegan Beer Festival will take place this May with more animal-free food and drinks at a much improved location.",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/u/original/5470943/vegan-beer.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/news/ray-cortines-friend-or-foe-2385731",
+              "og:type":"article",
+              "og:title":"Ray Cortines: Friend or Foe?",
+              "og:description":"Once again, the name of Ray Cortines is buzzing around the halls of Los Angeles Unified School District headquarters, according to today&#039;s LA Times. The...",
+              "og:url":"http://www.laweekly.com/news/ray-cortines-friend-or-foe-2385731",
+              "article:published_time":"2008-04-03T11:19:41-07:00",
+              "article:modified_time":"2014-11-26T15:13:17-08:00",
+              "article:section":"News",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Ray Cortines: Friend or Foe?",
+              "twitter:description":"Once again, the name of Ray Cortines is buzzing around the halls of Los Angeles Unified School District headquarters, according to today&#039;s LA Times. The...",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "os":"win xp",
+            "ram":13958643712
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"apache",
+        "_id":"AVKjHMJFzKqSZRTy0aZ2",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T13:03:25.224Z",
+          "ip":"104.81.75.87",
+          "extension":"css",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":32.51633333,
+              "lon":-84.93886111
+            },
+            "src":"CN",
+            "dest":"IR",
+            "srcdest":"CN:IR"
+          },
+          "@tags":[
+            "success",
+            "info"
+          ],
+          "utc_time":"2016-02-01T13:03:25.224Z",
+          "referer":"http://www.slate.com/success/michael-lopez-alegria",
+          "agent":"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1",
+          "clientip":"104.81.75.87",
+          "bytes":5518,
+          "host":"cdn.theacademyofperformingartsandscience.org",
+          "request":"/styles/semantic-ui.css",
+          "url":"https://cdn.theacademyofperformingartsandscience.org/styles/semantic-ui.css",
+          "@message":"104.81.75.87 - - [2016-02-01T13:03:25.224Z] \"GET /styles/semantic-ui.css HTTP/1.1\" 200 5518 \"-\" \"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>albert-sacco</h5>",
+            "http://facebook.com/warning/dmitri-kondratyev"
+          ],
+          "links":[
+            "sally-ride@facebook.com",
+            "http://www.slate.com/info/apollo-16",
+            "www.www.slate.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/news/pigs-on-beverly-west-of-echo-park-2368158",
+              "og:type":"article",
+              "og:title":"Pigs on Beverly, West of Echo Park",
+              "og:description":"And here&#039;s some body shop art on 1st St. Another big set from the CBS yard coming soon. All photos by Mark Mauer...",
+              "og:url":"http://www.laweekly.com/news/pigs-on-beverly-west-of-echo-park-2368158",
+              "article:published_time":"2008-01-07T08:42:27-08:00",
+              "article:modified_time":"2014-10-28T15:00:15-07:00",
+              "article:section":"News",
+              "article:tag":"Mark Mauer",
+              "og:image":"http://images1.laweekly.com/imager/pigs-on-beverly-west-of-echo-park/u/original/2431168/img_3697.jpg",
+              "og:image:height":"360",
+              "og:image:width":"480",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Pigs on Beverly, West of Echo Park",
+              "twitter:description":"And here&#039;s some body shop art on 1st St. Another big set from the CBS yard coming soon. All photos by Mark Mauer...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/pigs-on-beverly-west-of-echo-park/u/original/2431168/img_3697.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/arts/tee-for-all-the-aftermath-2372089",
+              "og:type":"article",
+              "og:title":"Tee-For-All (The Aftermath)",
+              "og:description":"Anyone who made it out to the American Apparel Flea Market event last Sunday knows what I&#039;m talkin&#039; about when I say it was post-apocalyptic insanity- a...",
+              "og:url":"http://www.laweekly.com/arts/tee-for-all-the-aftermath-2372089",
+              "article:published_time":"2007-12-12T14:39:21-08:00",
+              "article:modified_time":"2014-11-25T19:26:18-08:00",
+              "article:section":"Arts",
+              "article:tag":"Dov Charney",
+              "og:image":"http://images1.laweekly.com/imager/tee-for-all-the-aftermath/u/original/2437993/line1.jpg",
+              "og:image:height":"255",
+              "og:image:width":"384",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Tee-For-All (The Aftermath)",
+              "twitter:description":"Anyone who made it out to the American Apparel Flea Market event last Sunday knows what I&#039;m talkin&#039; about when I say it was post-apocalyptic insanity- a...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/tee-for-all-the-aftermath/u/original/2437993/line1.jpg",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "os":"win 8",
+            "ram":16106127360
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"apache",
+        "_id":"AVKjHMJFzKqSZRTy0aZ4",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T08:23:18.655Z",
+          "ip":"9.79.29.82",
+          "extension":"css",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":64.51220222,
+              "lon":-165.4452458
+            },
+            "src":"MX",
+            "dest":"CN",
+            "srcdest":"MX:CN"
+          },
+          "@tags":[
+            "success",
+            "info"
+          ],
+          "utc_time":"2016-02-01T08:23:18.655Z",
+          "referer":"http://www.slate.com/success/john-lounge",
+          "agent":"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1",
+          "clientip":"9.79.29.82",
+          "bytes":8839,
+          "host":"cdn.theacademyofperformingartsandscience.org",
+          "request":"/styles/undefined",
+          "url":"https://cdn.theacademyofperformingartsandscience.org/styles/undefined",
+          "@message":"9.79.29.82 - - [2016-02-01T08:23:18.655Z] \"GET /styles/undefined HTTP/1.1\" 200 8839 \"-\" \"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>liu-yang</h5>",
+            "http://facebook.com/success/gerhard-thiele"
+          ],
+          "links":[
+            "sergey-volkov@facebook.com",
+            "http://twitter.com/info/scott-altman",
+            "www.twitter.com"
+          ],
+          "relatedContent":[
+
+          ],
+          "machine":{
+            "ram":3221225472
+          }
+        }
+      },
+      {
+        "_index":"logstash-2016.02.01",
+        "_type":"apache",
+        "_id":"AVKjHMJFzKqSZRTy0aZ9",
+        "_score":1.0,
+        "_timestamp":1454435516997,
+        "_source":{
+          "index":"logstash-2016.02.01",
+          "@timestamp":"2016-02-01T17:54:38.212Z",
+          "ip":"125.128.201.236",
+          "extension":"jpg",
+          "response":"200",
+          "geo":{
+            "coordinates":{
+              "lat":33.09025889,
+              "lon":-89.54201722
+            },
+            "src":"CN",
+            "dest":"RW",
+            "srcdest":"CN:RW"
+          },
+          "@tags":[
+            "success",
+            "info"
+          ],
+          "utc_time":"2016-02-01T17:54:38.212Z",
+          "referer":"http://www.slate.com/success/ivan-bella",
+          "agent":"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1",
+          "clientip":"125.128.201.236",
+          "bytes":3385,
+          "host":"media-for-the-masses.theacademyofperformingartsandscience.org",
+          "request":"/uploads/kevin-p-chilton.jpg",
+          "url":"https://media-for-the-masses.theacademyofperformingartsandscience.org/uploads/kevin-p-chilton.jpg",
+          "@message":"125.128.201.236 - - [2016-02-01T17:54:38.212Z] \"GET /uploads/kevin-p-chilton.jpg HTTP/1.1\" 200 3385 \"-\" \"Mozilla/5.0 (X11; Linux x86_64; rv:6.0a1) Gecko/20110421 Firefox/6.0a1\"",
+          "spaces":"this   is   a   thing    with lots of     spaces       wwwwoooooo",
+          "xss":"<script>console.log(\"xss\")</script>",
+          "headings":[
+            "<h3>joseph-a-walker</h5>",
+            "http://www.slate.com/success/oleg-atkov"
+          ],
+          "links":[
+            "kenneth-ham@twitter.com",
+            "http://www.slate.com/security/apollo-8",
+            "www.www.slate.com"
+          ],
+          "relatedContent":[
+            {
+              "url":"http://www.laweekly.com/news/la-river-along-the-golden-state-six-2368103",
+              "og:type":"article",
+              "og:title":"L.A. River Along the Golden State - Six",
+              "og:description":"All photos by Mark Mauer. More after the jump...",
+              "og:url":"http://www.laweekly.com/news/la-river-along-the-golden-state-six-2368103",
+              "article:published_time":"2008-04-17T08:11:02-07:00",
+              "article:modified_time":"2014-10-28T15:00:04-07:00",
+              "article:section":"News",
+              "article:tag":"Mark Mauer",
+              "og:image":"http://images1.laweekly.com/imager/la-river-along-the-golden-state-six/u/original/2430745/img_5107.jpg",
+              "og:image:height":"323",
+              "og:image:width":"480",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"L.A. River Along the Golden State - Six",
+              "twitter:description":"All photos by Mark Mauer. More after the jump...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/la-river-along-the-golden-state-six/u/original/2430745/img_5107.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/news/woman-fatally-shot-in-front-of-cop-as-she-asks-for-help-5467237",
+              "og:type":"article",
+              "og:title":"Woman Fatally Shot in Front of Cop as She Asks for Help",
+              "og:description":"A brazen attacker who allegedly followed a woman even as she asked a cop for help opened fire, killing the woman, before he was taken out by the officer...",
+              "og:url":"http://www.laweekly.com/news/woman-fatally-shot-in-front-of-cop-as-she-asks-for-help-5467237",
+              "article:published_time":"2015-04-02T07:03:00-07:00",
+              "article:modified_time":"2015-04-02T11:40:03-07:00",
+              "article:section":"News",
+              "og:image":"http://images1.laweekly.com/imager/u/original/5467248/hawthornpd.jpg",
+              "og:image:height":"540",
+              "og:image:width":"720",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Woman Fatally Shot in Front of Cop as She Asks for Help",
+              "twitter:description":"A brazen attacker who allegedly followed a woman even as she asked a cop for help opened fire, killing the woman, before he was taken out by the officer...",
+              "twitter:card":"summary",
+              "twitter:image":"http://images1.laweekly.com/imager/u/original/5467248/hawthornpd.jpg",
+              "twitter:site":"@laweekly"
+            },
+            {
+              "url":"http://www.laweekly.com/music/prince-williams-killer-two-step-2412197",
+              "og:type":"article",
+              "og:title":"Prince William&#039;s killer two-step",
+              "og:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "og:url":"http://www.laweekly.com/music/prince-williams-killer-two-step-2412197",
+              "article:published_time":"2007-07-02T11:07:08-07:00",
+              "article:modified_time":"2014-11-27T10:36:11-08:00",
+              "article:section":"Music",
+              "og:site_name":"LA Weekly",
+              "twitter:title":"Prince William&#039;s killer two-step",
+              "twitter:description":"LA Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+              "twitter:card":"summary",
+              "twitter:site":"@laweekly"
+            }
+          ],
+          "machine":{
+            "os":"win 7",
+            "ram":6442450944
+          }
+        }
+      }
+    ]
+  },
+  "_scroll_id":"2"
+}
