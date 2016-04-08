@@ -17,7 +17,7 @@ const streamHits = require('../../lib/stream-hits');
 
 describe('stream-hits', function () {
   // we do setTimeouts in the tests, so we allow for slightly slower tests
-  this.slow(150);
+  this.slow(175);
 
   let params;
   let stream1;
@@ -72,7 +72,7 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 
   it('sends requests for all scroll results until empty', done => {
@@ -88,7 +88,7 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 
   it('only includes given params on the first request', done => {
@@ -111,7 +111,7 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 
   it('only includes sort on the first request', done => {
@@ -134,7 +134,7 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 
   it('only includes scroll_id on subsequent requests', done => {
@@ -157,7 +157,7 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 
   it('includes scroll on every request', done => {
@@ -181,7 +181,7 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 
   it('defaults scroll duration to 30s', done => {
@@ -204,7 +204,7 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 
   it('defaults sort to _doc', done => {
@@ -221,7 +221,7 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 
   it('allows for custom sorting', done => {
@@ -239,6 +239,6 @@ describe('stream-hits', function () {
       stream1.end();
       stream2.end();
       stream3.end();
-    }, 25);
+    }, 50);
   });
 });
