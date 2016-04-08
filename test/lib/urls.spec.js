@@ -7,42 +7,44 @@ const makeUrl = urlHelpers.makeUrl;
 const toUrlObj = urlHelpers.toUrlObj;
 
 describe('urls', () => {
-  describe('#assertValidUrlObj()', () => {
-    it('noops for urls without query strings or hashes', () => {
-      const urlObj = toUrlObj(makeUrl('/foo'));
-      expect(() => urls.assertValidUrlObj(urlObj)).not.to.throw();
-    });
-    it('throws if url includes query string', () => {
-      const urlObj = toUrlObj(makeUrl('/foo?bar'));
-      expect(() => urls.assertValidUrlObj(urlObj)).to.throw();
-    });
-    it('throws if url includes even an empty query string', () => {
-      const urlObj = toUrlObj(makeUrl('/foo?'));
-      expect(() => urls.assertValidUrlObj(urlObj)).to.throw();
-    });
-    it('throws if url includes a hash', () => {
-      const urlObj = toUrlObj(makeUrl('/foo#bar'));
-      expect(() => urls.assertValidUrlObj(urlObj)).to.throw();
-    });
-    it('throws if url includes even an empty hash', () => {
-      const urlObj = toUrlObj(makeUrl('/foo#'));
-      expect(() => urls.assertValidUrlObj(urlObj)).to.throw();
-    });
-  });
-
   describe('#getInitialUrl()', () => {
-    it('returns url string with /_search/scroll appended', () => {
-      const urlObj = toUrlObj(makeUrl('/foo/bar'));
+    it('returns url string representation of given url object', () => {
+      const urlObj = toUrlObj(makeUrl('/foo/bar?scroll=1m'));
       const url = urls.getInitialUrl(urlObj);
-      expect(url).to.equal(makeUrl('/foo/bar/_search/scroll'));
+      expect(url).to.equal(makeUrl('/foo/bar?scroll=1m'));
     });
   });
 
   describe('#getSubsequentUrl()', () => {
-    it('returns scroll search url string without initial path', () => {
-      const urlObj = toUrlObj(makeUrl('/foo/bar'));
+    it('returns scroll search url string without initial path or query', () => {
+      const urlObj = toUrlObj(makeUrl('/foo/bar?scroll=30s'));
       const url = urls.getSubsequentUrl(urlObj);
       expect(url).to.equal(makeUrl('/_search/scroll'));
+    });
+  });
+
+  describe('#parseUrl()', () => {
+    it('returns url object', () => {
+      const url = makeUrl('/foo/bar?scroll=45s');
+      const urlObj = urls.parseUrl(url);
+      expect(urlObj).to.have.property('protocol', 'http:');
+      expect(urlObj).to.have.property('auth', null);
+      expect(urlObj).to.have.property('hostname', 'example.com');
+      expect(urlObj).to.have.property('port', '1234');
+      expect(urlObj).to.have.deep.property('query.scroll', '45s');
+      expect(urlObj).to.have.property('pathname', '/foo/bar');
+    });
+
+    it('returned url object does not contain "search"', () => {
+      const url = makeUrl('/foo/bar?scroll=45s');
+      const urlObj = urls.parseUrl(url);
+      expect(urlObj).to.have.property('search', null);
+    });
+
+    it('returned url object does not contain "hash"', () => {
+      const url = makeUrl('/foo/bar?scroll=45s#blah');
+      const urlObj = urls.parseUrl(url);
+      expect(urlObj).to.have.property('hash', null);
     });
   });
 });

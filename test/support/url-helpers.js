@@ -3,7 +3,7 @@
 const url = require('url');
 
 function makeUrl(path) {
-  return url.resolve('http://example.com', path);
+  return url.resolve('http://example.com:1234', path);
 }
 
 function toUrlObj(urlStr) {
