@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib/stream-hits');
+module.exports = require('./lib/search');

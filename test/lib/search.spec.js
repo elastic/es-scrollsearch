@@ -2,23 +2,18 @@
 
 const PassThrough = require('stream').PassThrough;
 
+const JSONStream = require('JSONStream');
 const request = require('request');
 const sinon = require('sinon');
 
+const responseBody = require('../support/response-body');
 const urlHelpers = require('../support/url-helpers');
 const makeUrl = urlHelpers.makeUrl;
 const toUrlObj = urlHelpers.toUrlObj;
 
-const response1 = require('../support/fixtures/response1.json');
-const response2 = require('../support/fixtures/response2.json');
-const response3 = require('../support/fixtures/response3.json');
+const search = require('../../lib/search');
 
-const streamHits = require('../../lib/stream-hits');
-
-describe('stream-hits', function () {
-  // we do setTimeouts in the tests, so we allow for slightly slower tests
-  this.slow(175);
-
+describe('search()', function () {
   let params;
   let stream1;
   let stream2;
@@ -33,10 +28,6 @@ describe('stream-hits', function () {
     stream2 = new PassThrough();
     stream3 = new PassThrough();
 
-    stream1.write(JSON.stringify(response1));
-    stream2.write(JSON.stringify(response2));
-    stream3.write(JSON.stringify(response3));
-
     sinon.stub(request, 'post');
     request.post.onCall(0).returns(stream1);
     request.post.onCall(1).returns(stream2);
@@ -49,34 +40,33 @@ describe('stream-hits', function () {
   });
 
   it('returns a pipeable stream', () => {
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
     expect(stream.pipe).to.be.a('function');
   });
 
-  it('returns a stream comprised of hit objects from scroll requests', done => {
-    const stream = streamHits(url, params);
+  it('returns a stream comprised of hit objects from scroll requests', (done) => {
+    const stream = search(url, params);
 
-    const timestamps1 = response1.hits.hits.map(hit => hit._source['@timestamp']);
-    const timestamps2 = response2.hits.hits.map(hit => hit._source['@timestamp']);
-    const expected = timestamps1.concat(timestamps2);
+    const hits1 = JSON.parse(responseBody()).hits.hits;
+    const hits2 = JSON.parse(responseBody()).hits.hits;
+    const expected = hits1.concat(hits2).map(hit => hit._id);
 
-    const timestamps = [];
-    stream.on('data', data => timestamps.push(data['@timestamp']));
+    const chunks = [];
+    stream
+      .on('data', chunk => chunks.push(chunk))
+      .on('end', () => {
+        const actual = JSON.parse(chunks.join(''));
+        expect(actual.map(x => x._id)).to.deep.equal(expected);
+        done();
+      });
 
-    stream.on('end', () => {
-      expect(timestamps).to.deep.equal(expected);
-      done();
-    });
-
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
   });
 
   it('sends requests for all scroll results until empty', done => {
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
 
     stream.on('data', () => {}); // drain
     stream.on('end', () => {
@@ -84,15 +74,28 @@ describe('stream-hits', function () {
       done();
     });
 
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
+  });
+
+  it('emits an error when any request returns a non-200-level response status code', (done) => {
+    const stream = search(url, params);
+
+    stream
+      .on('data', () => {}) // drain
+      .on('error', (err) => {
+        expect(request.post).to.be.calledTwice;
+        expect(err).to.have.property('message').equal('Unexpected status code 400');
+        done();
+      });
+
+    stream1.on('end', () => stream2.emit('response', { statusCode: 400 }));
+    stream1.end(responseBody());
   });
 
   it('only includes given params on the first request', done => {
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
 
     stream.on('data', () => {}); // drain
     stream.on('end', () => {
@@ -107,15 +110,13 @@ describe('stream-hits', function () {
       done();
     });
 
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
   });
 
   it('only includes sort on the first request', done => {
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
 
     stream.on('data', () => {}); // drain
     stream.on('end', () => {
@@ -130,15 +131,13 @@ describe('stream-hits', function () {
       done();
     });
 
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
   });
 
   it('only includes scroll_id on subsequent requests', done => {
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
 
     stream.on('data', () => {}); // drain
     stream.on('end', () => {
@@ -147,22 +146,20 @@ describe('stream-hits', function () {
       const body3 = JSON.parse(request.post.getCall(2).args[0].body);
 
       expect(body1).not.to.have.property('scroll_id');
-      expect(body2).to.have.property('scroll_id', response1._scroll_id);
-      expect(body3).to.have.property('scroll_id', response2._scroll_id);
+      expect(body2).to.have.property('scroll_id', JSON.parse(responseBody())._scroll_id);
+      expect(body3).to.have.property('scroll_id', JSON.parse(responseBody())._scroll_id);
 
       done();
     });
 
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
   });
 
   it('includes scroll on every request', done => {
     url += '?scroll=1m'
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
 
     stream.on('data', () => {}); // drain
     stream.on('end', () => {
@@ -177,15 +174,13 @@ describe('stream-hits', function () {
       done();
     });
 
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
   });
 
   it('defaults scroll duration to 30s', done => {
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
 
     stream.on('data', () => {}); // drain
     stream.on('end', () => {
@@ -200,15 +195,13 @@ describe('stream-hits', function () {
       done();
     });
 
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
   });
 
   it('defaults sort to _doc', done => {
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
 
     stream.on('data', () => {}); // drain
     stream.on('end', () => {
@@ -217,16 +210,14 @@ describe('stream-hits', function () {
       done();
     });
 
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end());
+    stream2.on('end', () => stream3.end());
+    stream1.end();
   });
 
   it('allows for custom sorting', done => {
     params.sort = ['foo'];
-    const stream = streamHits(url, params);
+    const stream = search(url, params);
 
     stream.on('data', () => {}); // drain
     stream.on('end', () => {
@@ -235,10 +226,8 @@ describe('stream-hits', function () {
       done();
     });
 
-    setTimeout(() => {
-      stream1.end();
-      stream2.end();
-      stream3.end();
-    }, 50);
+    stream1.on('end', () => stream2.end());
+    stream2.on('end', () => stream3.end());
+    stream1.end();
   });
 });

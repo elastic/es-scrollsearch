@@ -1,66 +1,67 @@
 'use strict';
 
+const sinon = require('sinon');
 const PassThrough = require('stream').PassThrough;
-const JSONStream = require('JSONStream');
 const parseStream = require('../../lib/parse-stream');
 const responseBody = require('../support/response-body');
 
-describe('parse-stream', () => {
+describe('parseStream()', () => {
+  let handleHit;
+  let handleScrollId;
+  let onError;
   let stream;
   beforeEach(() => {
     stream = new PassThrough();
+    handleHit = sinon.stub();
+    handleScrollId = sinon.stub();
+    onError = sinon.stub();
   });
 
-  it('returns a single stream of hits', (done) => {
+  it('returns a stream of only the hits', (done) => {
     const hits = [];
-    parseStream(stream)
+    parseStream(stream, handleHit, handleScrollId, onError)
       .on('data', hit => hits.push(hit))
       .on('end', () => {
         expect(hits).to.deep.equal([
-          { foo: 'bar' }, { foo: 'notbar' },
           { foo: 'bar' }, { foo: 'notbar' }
         ]);
         done();
       });
 
-    stream.write(responseBody());
-    stream.write(responseBody());
-    stream.end();
+    stream.end(responseBody());
   });
 
-  describe('returned stream', () => {
-    it('emits next_id whenever scroll id is encountered', (done) => {
-      const ids = [];
-      parseStream(stream)
-        .on('data', () => {}) // drain it
-        .on('next_id', id => ids.push(id))
-        .on('end', () => {
-          expect(ids).to.deep.equal([
-            '1', '2', '3'
-          ]);
-          done();
-        });
+  it('invokes handleHit whenever a hit is encountered', (done) => {
+    parseStream(stream, handleHit, handleScrollId, onError)
+      .on('end', () => {
+        expect(handleHit).to.have.been.calledTwice;
+        expect(handleHit).to.have.been.calledWith({ foo: 'bar' });
+        expect(handleHit).to.have.been.calledWith({ foo: 'notbar' });
+        done();
+      });
 
-      stream.write(responseBody('1'));
-      stream.write(responseBody('2'));
-      stream.write(responseBody('3'));
-      stream.end();
-    });
+    stream.end(responseBody());
+  });
 
-    it('emits hit whenever a hit is encountered', (done) => {
-      const hits = [];
-      parseStream(stream)
-        .on('data', () => {}) // drain it
-        .on('hit', hit => hits.push(hit))
-        .on('end', () => {
-          expect(hits).to.deep.equal([
-            { foo: 'bar' }, { foo: 'notbar' }
-          ]);
-          done();
-        });
+  it('invokes handleScrollId when the scroll id is encountered', (done) => {
+    parseStream(stream, handleHit, handleScrollId, onError)
+      .on('end', () => {
+        expect(handleScrollId).to.have.been.calledOnce;
+        expect(handleScrollId).to.have.been.calledWith('123');
+        done();
+      });
 
-      stream.write(responseBody());
-      stream.end();
-    });
+    stream.end(responseBody());
+  });
+
+  it('invokes onError if given stream emits an error', (done) => {
+    parseStream(stream, handleHit, handleScrollId, onError)
+      .on('end', () => {
+        expect(onError).to.have.been.calledOnce;
+        expect(onError).to.have.been.calledWith('some error');
+        done();
+      });
+
+    stream.emit('error', 'some error');
   });
 });
