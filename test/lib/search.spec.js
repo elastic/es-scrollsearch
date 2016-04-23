@@ -1,6 +1,7 @@
 'use strict';
 
-const PassThrough = require('stream').PassThrough;
+const Stream = require('stream');
+const PassThrough = Stream.PassThrough;
 
 const JSONStream = require('JSONStream');
 const request = require('request');
@@ -42,6 +43,14 @@ describe('search()', function () {
   it('returns a pipeable stream', () => {
     const stream = search(url, params);
     expect(stream.pipe).to.be.a('function');
+  });
+
+  it('stream is a stream2 readable interface', () => {
+    const stream = search(url, params);
+
+    expect(stream).to.be.instanceOf(Stream);
+    expect(stream).to.have.property('_read').is.a('function');
+    expect(stream).to.have.property('_readableState').is.an('object');
   });
 
   it('returns a stream comprised of hit objects from scroll requests', (done) => {

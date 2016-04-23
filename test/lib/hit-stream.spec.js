@@ -1,7 +1,8 @@
 'use strict';
 
 const sinon = require('sinon');
-const PassThrough = require('stream').PassThrough;
+const Stream = require('stream');
+const PassThrough = Stream.PassThrough;
 const responseBody = require('../support/response-body');
 const hitStream = require('../../lib/hit-stream');
 
@@ -26,6 +27,15 @@ describe('hitStream()', () => {
       });
 
     stream.end();
+  });
+
+  it('stream is a stream2 readable interface', () => {
+    retrieve.returns(new PassThrough());
+    const stream = hitStream(retrieve);
+
+    expect(stream).to.be.instanceOf(Stream);
+    expect(stream).to.have.property('_read').is.a('function');
+    expect(stream).to.have.property('_readableState').is.an('object');
   });
 
   it('array is empty if there are no hits', (done) => {
