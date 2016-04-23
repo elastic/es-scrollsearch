@@ -1,6 +1,6 @@
 {
-  "name": "es-scrollsearch",
-  "version": "1.0.0-dev",
+  "name": "@elastic/scrollsearch",
+  "version": "1.0.0-alpha1",
   "description": "Scroll through all Elasticsearch search results as a single stream",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elastic/es-scroll-stream.git"
+    "url": "git+https://github.com/elastic/node-scrollsearch.git"
   },
   "keywords": [
     "elasticsearch",
@@ -24,9 +24,9 @@
     "node": "^4.3.0"
   },
   "bugs": {
-    "url": "https://github.com/elastic/es-scrollsearch/issues"
+    "url": "https://github.com/elastic/node-scrollsearch/issues"
   },
-  "homepage": "https://github.com/elastic/es-scrollsearch#readme",
+  "homepage": "https://github.com/elastic/node-scrollsearch#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^2.3.0",

@@ -1,4 +1,6 @@
 .eslintrc
 .nvmrc
 circle.yml
+example/
 test/
+tmp/

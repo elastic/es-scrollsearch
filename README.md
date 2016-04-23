@@ -1,4 +1,4 @@
-# Elasticsearch Scrolling Search [![Circle CI](https://circleci.com/gh/elastic/es-scrollsearch.svg?style=svg)](https://circleci.com/gh/elastic/es-scrollsearch)
+# Elasticsearch Scrolling Search [![Circle CI](https://circleci.com/gh/elastic/node-scrollsearch.svg?style=svg)](https://circleci.com/gh/elastic/node-scrollsearch)
 
 Scroll through all Elasticsearch search results as a single stream
 
@@ -9,7 +9,7 @@ Scroll through all Elasticsearch search results as a single stream
 ## Usage
 
 ```js
-const streamHits = require('es-scrollstream');
+const streamHits = require('@elastic/scrollsearch');
 
 const url = 'http://localhost:9200/logstash-*/_search';
 const params = { query: { term: { response: 200 } } };
@@ -22,7 +22,7 @@ streamHits(url, params).pipe(someOtherStream);
 Install into your project via npm:
 
 ```
-npm install es-scrollstream --save
+npm install @elastic/scrollsearch --save
 ```
 
 ## Testing
