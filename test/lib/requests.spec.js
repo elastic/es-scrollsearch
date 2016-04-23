@@ -42,6 +42,13 @@ describe('requests', () => {
         expect(params.headers).to.have.property('content-type', 'application/json');
       });
 
+      it('allows setting custom headers', () => {
+        requests.makeRequest(url, {}, {'content-type': 'wat', foo:'bar'});
+        const params = request.post.getCall(0).args[0];
+        expect(params.headers).to.have.property('content-type', 'wat');
+        expect(params.headers).to.have.property('foo', 'bar');
+      });
+
       it('includes the given data as a json stringified body', () => {
         const data = { foo: 'bar' };
         requests.makeRequest(url, data);
@@ -91,6 +98,15 @@ describe('requests', () => {
 
         const params = request.post.getCall(0).args[0];
         expect(params.headers).to.have.property('content-type', 'application/json');
+      });
+
+      it('allows setting custom headers', () => {
+        const next = requests.nextRequestFn(url, scroll, {'content-type': 'wat', foo:'bar'});
+        next('garbage');
+
+        const params = request.post.getCall(0).args[0];
+        expect(params.headers).to.have.property('content-type', 'wat');
+        expect(params.headers).to.have.property('foo', 'bar');
       });
 
       it('includes scroll and scroll_id as a json stringified body', () => {

@@ -79,6 +79,36 @@ describe('search()', function () {
     stream1.end(responseBody());
   });
 
+  it('defaults to sending application/json content-type header', done => {
+    const stream = search(url, params);
+
+    stream.on('data', () => {}); // drain
+    stream.on('end', () => {
+      const match = { headers: { 'content-type': 'application/json' } };
+      expect(request.post).to.always.be.calledWithMatch(match);
+      done();
+    });
+
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
+  });
+
+  it('allows overriding application/json content-type header', done => {
+    const stream = search(url, params, { 'content-type': 'wat', 'foo': 'bar' });
+
+    stream.on('data', () => {}); // drain
+    stream.on('end', () => {
+      const match = { headers: { 'content-type': 'wat', 'foo': 'bar' } };
+      expect(request.post).to.always.be.calledWithMatch(match);
+      done();
+    });
+
+    stream1.on('end', () => stream2.end(responseBody()));
+    stream2.on('end', () => stream3.end(responseBody(null, [])));
+    stream1.end(responseBody());
+  });
+
   it('emits an error when any request returns a non-200-level response status code', (done) => {
     const stream = search(url, params);
 
