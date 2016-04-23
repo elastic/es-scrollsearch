@@ -1,6 +1,6 @@
 {
   "name": "@elastic/scrollsearch",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0-beta2",
   "description": "Scroll through all Elasticsearch search results as a single stream",
   "main": "index.js",
   "scripts": {
